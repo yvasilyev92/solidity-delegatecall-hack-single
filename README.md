@@ -4,4 +4,4 @@
 
 #### In the example code in this repo the Proxy contract has a logic contract named Implementation. The Implementation contract has a mathValue uint variable in place of its Slot 1 storage while the Proxy contract has an owner address variable in its Slot 1 storage. This is exploited by an Attacker contract that casts msg.sender to a uint and thus is able to call the Implementation.setMathValue through the Proxy contract and writes the address of msg.sender to Proxy.owner variable at Slot 1 thus changing the ownership of the Proxy contract & allowing for withdrawal of funds.
 
-![](/flow.drawio.png)
+![](./dflow.drawio.png)
